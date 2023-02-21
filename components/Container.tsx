@@ -1,5 +1,8 @@
 import Head from "next/head";
+import { twMerge } from "tailwind-merge";
 import { Inter } from "@next/font/google";
+import Header from "./Header";
+import Footer from "./Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,7 +22,11 @@ export default function Container({ children }: Props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={inter.className}>{children}</main>
+      <main className={twMerge("flex w-full", inter.className)}>
+        <Header />
+        {children}
+        <Footer />
+      </main>
     </>
   );
 }
