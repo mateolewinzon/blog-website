@@ -22,7 +22,7 @@ export default function Container({ children }: Props) {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={twMerge("flex w-full", inter.className)}>
+      <main className={twMerge("flex flex-col w-full", inter.className)}>
         <Header />
         {children}
         <Footer />

@@ -5,12 +5,10 @@ module.exports = {
     "./components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {
-      colors: {
-        "light-blue": "#C9E0FE",
-        "light-violet": "#DDC6FC",
-      },
-    },
+    extend: {},
   },
-  plugins: [],
+  plugins: [
+    require("@tailwindcss/typography"),
+    require("@tailwindcss/line-clamp"),
+  ],
 };

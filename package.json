@@ -10,18 +10,24 @@
   },
   "dependencies": {
     "@next/font": "13.1.6",
+    "@tailwindcss/line-clamp": "^0.4.2",
     "@types/node": "18.14.0",
     "@types/react": "18.0.28",
     "@types/react-dom": "18.0.11",
+    "easymde": "^2.18.0",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
     "next": "13.1.6",
+    "next-sanity": "^4.1.5",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "sanity": "^3.5.0",
+    "sanity-plugin-markdown": "^4.0.0",
     "tailwind-merge": "^1.10.0",
     "typescript": "4.9.5"
   },
   "devDependencies": {
+    "@tailwindcss/typography": "^0.5.9",
     "autoprefixer": "^10.4.13",
     "postcss": "^8.4.21",
     "tailwindcss": "^3.2.7"
