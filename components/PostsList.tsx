@@ -14,8 +14,9 @@ export default function PostList({ categories, posts }: Props) {
   return (
     <>
       <div className="flex my-2 gap-2">
-        {categories.map((c) => (
+        {categories.map((c, key) => (
           <button
+            key={key}
             onClick={() =>
               setCategory((current) => (current === c.name ? "" : c.name))
             }
@@ -31,8 +32,8 @@ export default function PostList({ categories, posts }: Props) {
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-9">
         {posts
           .filter((post) => category === "" || post.category === category)
-          .map((post) => (
-            <PostCard post={post} />
+          .map((post, key) => (
+            <PostCard key={key} post={post} />
           ))}
       </div>
     </>

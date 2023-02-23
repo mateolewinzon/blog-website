@@ -20,8 +20,8 @@ export default function PostsSlider({ posts }: Props) {
         arrows: false
       }}
     >
-      {posts.map((post) => (
-        <li className="rounded-xl">
+      {posts.map((post, key) => (
+        <li className="rounded-xl" key={key}>
           <div className="grid md:grid-cols-2 gap-3">
             <div className="relative w-full h-64">
               <Image

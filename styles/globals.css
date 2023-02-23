@@ -1,3 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.bg-radial-red-cyan {
+  background-image: radial-gradient(
+    50% 50% at 50% 50%,
+    #ffdee9 0%,
+    rgba(181, 255, 252, 0.21) 45.13%,
+    rgba(255, 255, 255, 0.1) 100%
+  );
+}
