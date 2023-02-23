@@ -4,7 +4,7 @@ import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import remarkToc from "remark-toc";
 import rehypeExtractHeadings from "./extractHeadings";
 
-export async function mdxToHtml(mdx) {
+export async function mdxToHtml(mdx: any) {
   const headings: any[] = [];
 
   const mdxSource = await serialize(mdx, {
