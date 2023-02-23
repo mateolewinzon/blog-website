@@ -8,7 +8,7 @@ type Props = {
 };
 
 export default function PostCard({ post }: Props) {
-  console.log(getUrl(post.image));
+  
   return (
     <Link href={`/${post.slug}`}>
       <div className="flex flex-col gap-4 rounded-lg">
