@@ -5,4 +5,9 @@ export type Post = {
     // content: Object
     teaser: string
     image: string
+    category: string
+}
+
+export type Category = {
+    name: string
 }

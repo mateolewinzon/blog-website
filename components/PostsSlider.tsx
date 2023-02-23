@@ -17,6 +17,7 @@ export default function PostsSlider({ posts }: Props) {
         dots: true,
         infinite: true,
         speed: 500,
+        arrows: false
       }}
     >
       {posts.map((post) => (
@@ -28,7 +29,7 @@ export default function PostsSlider({ posts }: Props) {
                 src={getUrl(post.image).width(1280).width(720).url()}
                 fill
                 style={{ objectFit: "cover" }}
-                className="rounded-xl"
+                className="rounded-xl shadow-sm"
               />
             </div>
             <div className="flex flex-col gap-4">

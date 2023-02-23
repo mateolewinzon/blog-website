@@ -17,7 +17,7 @@ export default function PostCard({ post }: Props) {
           src={getUrl(post.image).width(1600).height(900).url()}
           height={900}
           width={1600}
-          className="rounded-xl"
+          className="rounded-xl shadow-sm"
         />
         <div className="flex flex-col gap-3">
           <h4 className="font-bold text-xl line-clamp-2">{post.title}</h4>
