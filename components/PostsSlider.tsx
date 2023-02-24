@@ -19,7 +19,7 @@ export default function PostsSlider({ posts }: Props) {
 
   useEffect(() => {
     posts.forEach((post) => router.prefetch(`/${post.slug}`));
-  }, []);
+  }, [posts, router]);
 
   return (
     <Slider
