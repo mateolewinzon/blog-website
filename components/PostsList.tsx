@@ -21,8 +21,8 @@ export default function PostList({ categories, posts }: Props) {
               setCategory((current) => (current === c.name ? "" : c.name))
             }
             className={twMerge(
-              "p-4 rounded-full text-neutral-400 font-medium hover:text-neutral-600",
-              c.name === category && "text-neutral-900"
+              "p-4 rounded-full text-gray-500 font-medium hover:text-gray-600",
+              c.name === category && "text-gray-900"
             )}
           >
             {c.name}

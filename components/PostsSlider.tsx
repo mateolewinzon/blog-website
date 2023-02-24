@@ -53,7 +53,7 @@ export default function PostsSlider({ posts }: Props) {
                   {post.title}
                 </h3>
                 <p className="text-gray-700 text-lg line-clamp-3">{post.teaser}</p>
-                <p className="text-sm text-neutral-900 font-medium">
+                <p className="text-sm text-gray-900 font-medium">
                   {post.date.slice(0, 10)}
                 </p>
               </div>
