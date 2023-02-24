@@ -17,9 +17,9 @@ export default function Home({ posts, categories }: Props) {
       <div className="bg-radial-red-cyan">
         <div className="mx-auto p-4 mt-20 sm:max-w-2xl md:max-w-3xl lg:max-w-4xl xl:max-w-5xl">
           <section className="py-4">
-            <div className="flex flex-col gap-1">
-              <h1 className="font-bold text-4xl">Our blog</h1>
-              <h2 className="text-grey">
+            <div className="flex flex-col gap-5 lg:gap-3">
+              <h1 className="font-bold text-6xl sm:text-5xl md:text4xl lg:text-3xl">Our blog</h1>
+              <h2 className="text-gray-700 text-lg">
                 Stay up to date with the latest stories and commentary brought
                 to you by Binance, the world&apos;s leading blockchain and crypto
                 ecosystem.
