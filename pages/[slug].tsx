@@ -43,6 +43,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
       },
       relatedPosts,
     },
+    revalidate: 60 * 60 * 24
   };
 };
 
