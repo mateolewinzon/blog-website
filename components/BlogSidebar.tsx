@@ -29,11 +29,20 @@ export default function BlogSidebar({ post }: Props) {
           </a>
         </div>
         <div className="flex flex-col gap-1 my-4">
-          {post.content.headings.map((heading, key) => (
-            <Link key={key} href={`#${heading.id}`}>
-              <div className={`indent-${heading.rank} text-neutral-500 font-medium hover:text-neutral-800`}>• {heading.title}</div>
-            </Link>
-          ))}
+          <ul>
+            {post.content.headings.map((heading, key) => (
+              <Link key={key} href={`#${heading.id}`}>
+                <li
+                  style={{
+                    textIndent: heading.rank > 2 ? 2.5 ** heading.rank : 0,
+                  }}
+                  className={`text-neutral-500 font-medium hover:text-neutral-800`}
+                >
+                  • {heading.title}
+                </li>
+              </Link>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
