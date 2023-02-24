@@ -19,8 +19,8 @@ export default function BlogSidebar({ post, relatedPosts }: Props) {
       <div className="flex flex-col gap-5">
         <span className="text-xl font-medium">Related Posts</span>
         <div className="flex flex-col gap-8">
-          {relatedPosts.map((post) => (
-            <PostCard post={post} isSmallPreview={true} />
+          {relatedPosts.map((post, key) => (
+            <PostCard key={key} post={post} isSmallPreview={true} />
           ))}
         </div>
       </div>
