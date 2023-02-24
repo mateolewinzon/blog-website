@@ -11,8 +11,8 @@ Suggestions and comments will be appreciated.
 ### Blog: Static generated pages out of compiled Markdown (MDX) using next-mdx-remote and Sanity.io CMS
 ### CMS: Sanity.io
 
-Project remarks
-/components/* : Contains all of the components used in the app.
-/lib/*: External libraries utilized mostly in the server side of the App. The files containing '-client' in their name are OK to use client-side.
+## Project remarks
+- `/components/*` : Contains all of the components used in the app.
+- `/lib/*`: External libraries utilized mostly in the server side of the App. The files containing '-client' in their name are OK to use client-side.
 
 Use env.example as a guide to which environment variables are needed in the project.
