@@ -2,13 +2,14 @@ import { getUrl } from "@/lib/sanity-client";
 import { Post } from "@/lib/types";
 import Image from "next/image";
 import Link from "next/link";
+import { twMerge } from "tailwind-merge";
 
 type Props = {
   post: Post;
+  isSmallPreview?: boolean;
 };
 
-export default function PostCard({ post }: Props) {
-  
+export default function PostCard({ post, isSmallPreview = false }: Props) {
   return (
     <Link href={`/${post.slug}`}>
       <div className="flex flex-col gap-4 rounded-lg">
@@ -20,9 +21,24 @@ export default function PostCard({ post }: Props) {
           className="rounded-xl shadow-sm"
         />
         <div className="flex flex-col gap-3">
-          <h4 className="font-bold text-xl line-clamp-2">{post.title}</h4>
-          <p className="text-sm text-neutral-600 line-clamp-3">{post.teaser}</p>
-          <p className="text-sm text-neutral-800">{post.date.slice(0, 10)}</p>
+          <h4
+            className={twMerge(
+              "font-bold text-xl line-clamp-2",
+              isSmallPreview && "text-base font-normal"
+            )}
+          >
+            {post.title}
+          </h4>
+          {!isSmallPreview && (
+            <>
+              <p className="text-gray-700 text-base line-clamp-3">
+                {post.teaser}
+              </p>
+              <p className="text-sm text-gray-900 font-medium">
+                {post.date.slice(0, 10)}
+              </p>
+            </>
+          )}
         </div>
       </div>
     </Link>
