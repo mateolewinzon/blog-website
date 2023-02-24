@@ -1,11 +1,14 @@
 import { MDXRemoteSerializeResult } from "next-mdx-remote/dist";
 
+export type Heading = { title: string; id: string; rank: number };
+
 export type Post = {
+  _id: string;
   title: string;
   date: string;
   slug: string;
   content: MDXRemoteSerializeResult & {
-    headings: { title: string; id: string; rank: number }[];
+    headings: Heading[];
   };
   teaser: string;
   image: string;

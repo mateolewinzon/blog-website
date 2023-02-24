@@ -3,9 +3,10 @@ import rehypeSlug from "rehype-slug";
 import rehypeAutolinkHeadings from "rehype-autolink-headings";
 import remarkToc from "remark-toc";
 import rehypeExtractHeadings from "./extractHeadings";
+import type { Heading } from "./types";
 
 export async function mdxToHtml(mdx: any) {
-  const headings: any[] = [];
+  const headings: Heading[] = [];
 
   const mdxSource = await serialize(mdx, {
     mdxOptions: {
