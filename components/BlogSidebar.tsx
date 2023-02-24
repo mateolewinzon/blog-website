@@ -13,7 +13,7 @@ type Props = {
 
 export default function BlogSidebar({ post, relatedPosts }: Props) {
   return (
-    <div className="flex flex-col not-prose gap-3">
+    <div className="flex flex-col not-prose gap-6">
       <SharePost slug={post.slug} />
       <TableOfContnets headings={post.content.headings} />
       <div className="flex flex-col gap-5">
